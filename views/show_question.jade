@@ -1,0 +1,48 @@
+doctype html
+html
+  head
+    title TYCC
+    link(rel='stylesheet', href='stylesheets/main.css')
+    script(data-main='javascripts/index', src='/javascripts/require.js')
+  body
+    include nav
+    div(class="wrapper") 
+      h2(class="show_question_title") 题目列表
+      div.show_question
+        - each question,index in questions
+          if index % 2 === 0
+            div(id=question._id,class="show_question_block odd")
+              div
+                p(class="") 题目：
+                p=question.question
+              div.show_answers
+                ul(class="show_answers_list")
+                  - function letterOrder(num){return String.fromCharCode(65 + num)};
+                  - each answer,index in question.answers
+                    li #{letterOrder(index) + ". " + answer}
+              div.show_true_answers
+                p 正确答案：
+                  - each trueanswer,index in question.trueanswer
+                    if trueanswer == "true"
+                      if index === 0
+                        span #{letterOrder(index)}
+                      else
+                        span #{" , " + letterOrder(index)}
+          else
+            div(id=question._id,class="show_question_block even")
+              div
+                p(class="") 题目：
+                p=question.question
+              div.show_answers
+                ul(class="show_answers_list")
+                  - function letterOrder(num){return String.fromCharCode(65 + num)};
+                  - each answer,index in question.answers
+                    li #{letterOrder(index) + ". " + answer}
+              div.show_true_answers
+                p 正确答案：
+                  - each trueanswer,index in question.trueanswer
+                    if trueanswer == "true"
+                      if index === 0
+                        span #{letterOrder(index)}
+                      else
+                        span #{" , " + letterOrder(index)}

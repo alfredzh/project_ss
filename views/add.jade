@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title TYCC
+    link(rel='stylesheet', href='stylesheets/main.css')
+    script(data-main='javascripts/add', src='/javascripts/require.js')
+  body
+    include nav
+    section(class="wrapper")
+      p(class="add_title") 增加新题
+      form#add_form(action="/add_question",method="post")
+        //- div.add_question_name
+        //-   input(type="text",name="add_question_name")
+        div.add_question
+          textarea(style="width:1000px;height:100px;",name="add_question")
+        div.add_options
+          label
+            input(type="radio",name="add_radio",value="a")
+            span A
+            input(type="text",name="add_options")
+          label
+            input(type="radio",name="add_radio",value="b")
+            span B
+            input(type="text",name="add_options")
+        div
+          input(class="add_options_btn btn_primary",type="button",value="增加选项")
+        div
+          input(class="btn_primary",type="submit",value="提交")

@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title TYCC
+    link(rel='stylesheet', href='stylesheets/main.css')
+    script(data-main='javascripts/login', src='/javascripts/require.js')
+  body
+    img(class="blur",src="../images/beach_bg_blur.jpg",width="100%",height="100%")
+    div.navwrapper
+      div.nav
+        h1.navlogo.fl
+          a TYCC
+    form.loginwrapper
+      div.loginuser
+        span 用户名：
+        input(type="text",name="username",placeholder="用户名")
+      div.loginpwd
+        span 密码：
+        input(type="password",name="password",placeholder="密码")
+      div.loginsubmit
+        input(type="button",name="loginsbumit",value="登陆")
+        a(href="/reg" class="btn_primary") 注册

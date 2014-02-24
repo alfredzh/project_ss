@@ -1,0 +1,20 @@
+doctype html
+html
+  head
+    title TYCC
+    link(rel='stylesheet', href='stylesheets/main.css')
+    script(data-main='javascripts/login', src='/javascripts/require.js')
+  body
+  	include nav
+    div(class="wrapper") 
+      h2(class="training_question_title") 练习
+      div(id=question._id,class="training_question_block")
+        div
+          p(class="") 题目：
+          p=question.question
+        div.show_answers
+          ul(class="show_answers_list")
+            - function letterOrder(num){return String.fromCharCode(65 + num)};
+            - each answer,index in question.answers
+              li 
+			  	input(type=question) #{letterOrder(index) + ". " + answer}

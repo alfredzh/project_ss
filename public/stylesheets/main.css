@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* css reset start*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre, 
+form,fieldset,input,textarea,p,blockquote,th,td {padding:0;margin:0;} 
+table {border-collapse:collapse;border-spacing:0;} 
+fieldset,img {border:0;}
+body {font:12px/1.5 Microsoft Yahei,"宋体",tahoma, arial, simsun;}
+a, a:link, a:visited {text-decoration:none;outline:none;cursor:pointer;color:white;}
+address,caption,cite,code,dfn,em,strong,th,var {font-weight:normal;font-style:normal;} 
+ol,ul {list-style:none;} 
+caption,th {text-align:left;} 
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:100%;} 
+q:before,q:after {content:'';} 
+abbr,acronym {border:0;}
+input {outline:none;font:12px/1.5 Microsoft Yahei,"宋体",tahoma, arial, simsun;}
+i {font-style:normal;}
+textarea {font:12px/1.5 Microsoft Yahei,"宋体",tahoma, arial, simsun;}
+/* css reset end*/
+
+.fl {float:left;}
+.fr {float:right;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*display:inline-block;_height:1%;}
+
+.btn {padding:1em 5em;background:#358cce;border-radius:0.3em;border:none;font-size:1.3em;cursor: pointer;}
+.txt_input {width:200px;height:30px;border:none;}
+
+.btn_primary {display: inline-block;border:none;color:white;background:#36d2ff;font-size:30px;line-height:50px;width: 200px;height: 50px;margin: 0 5px;}
+
+/*-------------------*/
+body {min-width:1200px;}
+.wrapper {width: 1200px;margin: 0 auto;}
+.blur {min-width:100%;min-height:100%;position: fixed;opacity: 0.8;z-index:-2;}
+.navwrapper {width:100%;background:#343131;margin-bottom:20px;}
+.nav {width:1200px;height:100px;overflow:hidden;color:white;margin:0 auto;overflow: hidden;}
+.navlogo {height:50px;font-size: 30px;line-height:50px;margin:0 10px;}
+.navbtns {font-size:20px;line-height:50px;margin:0 10px;}
+.navbtns li {float:left;}
+.navbtns a {height:60px;color:white;padding:0 20px;display: block;}
+.navbtns a:hover {background:white;color:rgb(0,140,211);}
+.main {width:1000px;/*min-height:500px;*/background:white;margin:0 auto 20px;overflow: hidden;box-shadow: 0px 0 20px 0 rgba(0,0,0,0.2);}
+.main_big {width:100%;/*min-height:500px;*/}
+.main_small {width:220px;min-height:500px;background:#373737;margin:10px;}
+
+/* index */
+.index_btn ul li {text-align: center;margin-bottom: 20px;}
+.index_btn ul a {color:white;}
+
+/* main_nav */
+.main_nav {overflow: hidden;}
+.main_nav ul {width:1200px;margin: 0 auto;text-align: center;}
+.main_nav ul li {display: inline-block;}
+.main_nav ul li a {text-align: center;}
+
+/* show question */
+.show_question {}
+.show_question_block {margin-bottom: 20px;}
+.show_question_title {font-size:30px;margin:10px 0;}
+.show_answers_list li {margin-right:20px;}
+
+/*topic*/
+.post {width:100%;min-height:100px;overflow:hidden;background:rgba(255,255,255,0.5);margin-bottom:10px;}
+.posttitle {overflow:hidden;}
+.username {text-align: center;}
+.headicon {/*margin:13px 0 0 20px;*/width:60px;height:60px;border:8px solid #82e7f9;border-radius:50px;overflow:hidden;display: block;}
+.headtext {float:left;margin-left:30px;width:750px;}
+.postdetail {margin:13px 0 0 120px;overflow: hidden;}
+.postdetail h3 {font-size:20px;color:rgb(75,100,160);padding:0 30px;}
+.postdetail p {font-size:14px;}
+.posttoolbar {margin-left:120px;}
+.sendpost {margin-bottom:10px;overflow: hidden;}
+#postcontent {width:500px;height:100px;float:left;resize:none;overflow:auto;overflow-x:hidden;}
+#postsubmit {}
+/*login*/
+.loginwrapper {width:800px;height:300px;margin:0 auto;box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);background:white;margin-top:10%;}
+.loginuser ,.loginpwd {width:255px;margin:20px auto;}
+.loginuser span , .loginpwd span {display: block;float:left;width:100px;}
+.loginsubmit {text-align: center;}
+.loginsubmit input {width: 200px;height: 50px;display: inline-block;margin: 0 5px;}
+/*reg*/
+.regwrapper {width:800px;height:500px;margin:0 auto;box-shadow: 10px 10px 5px black;background:white;margin-top:100px;}
+.reguser ,.regpwd ,.code{width:350px;margin:20px auto;line-height: 44px;}
+.reguser span , .regpwd span ,.code span {display: block;float:left;width:100px;}
+.regsubmit input {display: block;margin: 0 auto;}
+
+.btn-primary {background:#428bca;border:1px solid #357ebd;color:white;}
+
+.input_post_title {width:500px;height:30px;margin-bottom: 10px;}
+.input_post_wp {margin:0 10px;}
+
+/* add */
+.add_options label {display: block;width: 300px;margin-bottom: 10px;}
+.add_options label input {margin: 5px 0;}
+.add_options_btn {}
+.add_title {font-size:30px;}

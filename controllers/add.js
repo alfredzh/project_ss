@@ -3,7 +3,7 @@
 
 var question = require('../models/questions');
 
-exports.doAddQuestion = function(req,res,next){
+exports.addQuestion = function(req,res,next){
 	
 // question:req.body.question,
 // 		answer:req.body.options,
@@ -14,14 +14,10 @@ exports.doAddQuestion = function(req,res,next){
 		answers:req.body.answers,
 		trueanswer:req.body.trueanswer,
 		type:req.body.type,
-		modifydate:new Date()
+		random:Math.random()
 	});
 	newQuestion.save(function(err){
 		if(err) throw err;
 		res.json('success');
 	});
-}
-
-exports.showAddQuestion = function(req,res,next){
-	res.render('add',{title:"ss"});
 }

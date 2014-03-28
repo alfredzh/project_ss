@@ -9,7 +9,7 @@ var questionSchema = new Schema({
 	answers: Array,
 	trueanswer: Array,
 	type: String,
-	create_date:new Date()
+    random: Number
 });
 
 module.exports = mongoose.connection.model('questions',questionSchema);

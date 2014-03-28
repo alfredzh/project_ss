@@ -52,9 +52,9 @@ exports.login = function(req, res){
 		&& req.session.auth.userid == 'tycc_ss' 
 		&& req.session.auth.ip == req.connection.remoteAddress
 		&& req.session.auth.useragent == req.headers['user-agent']){
-			res.redirect('/');
+			res.render('/');
 	}else{
-		res.redirect('/login');
+		res.render('login');
 	}
 };
 
